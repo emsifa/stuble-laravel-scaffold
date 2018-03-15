@@ -1,0 +1,91 @@
+## path: {? model_namespace["App\Models"].namespaceToPath ?}/{? entity.pascal ?}.php
+<?php
+
+namespace {? model_namespace ?};
+
+use Illuminate\Database\Eloquent\Model;
+
+class {? entity.pascal ?} extends Model
+{
+
+    /*
+    |--------------------------------------------------------------------------
+    | PROPERTIES
+    |--------------------------------------------------------------------------
+    */
+
+    /**
+     * The table associated with the model.
+     *
+     * @var string
+     */
+    protected $table = "{? entity.snake.plural ?}";
+
+    /**
+     * Indicates if the model should be timestamped.
+     *
+     * @var boolean
+     */
+    public $timestamps = true;
+
+    /**
+     * Indicates if the model should be timestamped.
+     *
+     * @var boolean
+     */
+    protected $fillable = [
+        // @TODO: put fillable fields here
+    ];
+
+    /**
+     * The attributes that aren't mass assignable.
+     *
+     * @var array
+     */
+    // protected $guarded = ['id'];
+
+    /**
+     * The attributes that should be hidden for arrays
+     *
+     * @var array
+     */
+    // protected $hidden = [];
+
+    /**
+     * The attributes that should be mutated to dates.
+     *
+     * @var array
+     */
+    // protected $dates = [];
+
+    /*
+    |--------------------------------------------------------------------------
+    | FUNCTIONS
+    |--------------------------------------------------------------------------
+    */
+
+    /*
+    |--------------------------------------------------------------------------
+    | RELATIONS
+    |--------------------------------------------------------------------------
+    */
+
+    /*
+    |--------------------------------------------------------------------------
+    | SCOPES
+    |--------------------------------------------------------------------------
+    */
+
+    /*
+    |--------------------------------------------------------------------------
+    | ACCESORS
+    |--------------------------------------------------------------------------
+    */
+
+    /*
+    |--------------------------------------------------------------------------
+    | MUTATORS
+    |--------------------------------------------------------------------------
+    */
+
+}

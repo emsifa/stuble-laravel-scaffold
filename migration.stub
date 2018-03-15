@@ -1,0 +1,34 @@
+## path: database/migrations/{? date("Y_m_d_His") ?}_create_{? entity.snake.plural ?}_table.php
+<?php
+
+use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
+
+class Create{? entity.plural.pascal ?}Table extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('{? entity.snake.plural ?}', function (Blueprint $table) {
+            $table->increments('id');
+            // @TODO: fill fields definition here
+
+            $table->timestamps();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('{? entity.snake.plural ?}');
+    }
+}

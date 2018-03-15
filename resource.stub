@@ -1,0 +1,20 @@
+## path: {? resource_namespace["App\Http\Resources"].namespaceToPath ?}/{? entity.pascal ?}Resource.php
+<?php
+
+namespace {? resource_namespace ?};
+
+use Illuminate\Http\Resources\Json\JsonResource;
+
+class {? entity.pascal ?}Resource extends JsonResource
+{
+    /**
+     * Transform the resource into an array.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return array
+     */
+    public function toArray($request)
+    {
+        return parent::toArray($request);
+    }
+}

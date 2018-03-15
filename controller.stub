@@ -1,0 +1,135 @@
+## path: {? controller_namespace.namespaceToPath ?}/{? entity.pascal ?}Controller.php
+<?php
+
+namespace {? controller_namespace["App\Http\Controllers"] ?};
+
+use {? model_namespace["App\Models"] ?}\{? entity.pascal ?};
+use {? request_namespace["App\Http\Requests"] ?}\Store{? entity.pascal ?}Request;
+use {? request_namespace["App\Http\Requests"] ?}\Update{? entity.pascal ?}Request;
+use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+
+class {? entity.pascal ?}Controller extends Controller
+{
+    /**
+     * Display a listing of the {? entity ?}.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index()
+    {
+        $data['title'] = "List {? entity.title ?}";
+
+        return view('{? entity.kebab ?}.index', $data);
+    }
+
+    /**
+     * Show the form for creating a new {? entity ?}.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function create()
+    {
+        $data['title'] = "Create {? entity.title ?}";
+
+        return view('{? entity.kebab ?}.create', $data);
+    }
+
+    /**
+     * Store a newly created {? entity ?} in storage.
+     *
+     * @param  \{? request_namespace ?}\Store{? entity.pascal ?}Request $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Store{? entity.pascal ?}Request $request)
+    {
+        ${? entity.camel ?} = new {? entity.pascal ?};
+        $saved = $this->save(${? entity.camel ?}, $request);
+
+        if ($saved) {
+            // @TODO: Do something when insert success
+        } else {
+            // @TODO: Do something when insert fails
+        }
+    }
+
+    /**
+     * Display the specified {? entity ?}.
+     *
+     * @param  \{? model_namespace ?}\{? entity.pascal ?} ${? entity.camel ?}
+     * @return \Illuminate\Http\Response
+     */
+    public function show({? entity.pascal ?} ${? entity.camel ?})
+    {
+        $data['title'] = "Show {? entity.title ?} #" . ${? entity.camel ?}->getKey();
+        $data['{? entity.camel ?}'] = ${? entity.camel ?};
+        
+        return view('{? entity.kebab ?}.show', $data);
+    }
+
+    /**
+     * Show the form for editing the specified {? entity ?}.
+     *
+     * @param  \{? model_namespace ?}\{? entity.pascal ?} ${? entity.camel ?}
+     * @return \Illuminate\Http\Response
+     */
+    public function edit({? entity.pascal ?} ${? entity.camel ?})
+    {
+        $data['title'] = "Edit {? entity.title ?} #" . ${? entity.camel ?}->getKey();
+        $data['{? entity.camel ?}'] = ${? entity.camel ?};
+
+        return view('{? entity.kebab ?}.edit', $data);
+    }
+
+    /**
+     * Update the specified {? entity ?} in storage.
+     *
+     * @param  \{? request_namespace ?}\Update{? entity.pascal ?}Request $request
+     * @param  \{? model_namespace ?}\{? entity.pascal ?} ${? entity.camel ?}
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Update{? entity.pascal ?}Request $request, {? entity.pascal ?} ${? entity.camel ?})
+    {
+        $saved = $this->save(${? entity.camel ?}, $request);
+
+        if ($saved) {
+            // @TODO: Do something when update success
+        } else {
+            // @TODO: Do something when update fails
+        }
+    }
+
+    /**
+     * Remove the specified {? entity ?} from storage.
+     *
+     * @param  \{? model_namespace ?}\{? entity.pascal ?} ${? entity.camel ?}
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy({? entity.pascal ?} ${? entity.camel ?})
+    {
+        $deleted = ${? entity.camel ?}->delete();
+
+        if ($deleted) {
+            // @TODO: Do something when delete success
+        } else {
+            // @TODO: Do something when delete fails
+        }
+    }
+
+    /**
+     * Insert or update given model
+     *
+     * @param  \{? model_namespace ?}\{? entity.pascal ?} ${? entity.camel ?}
+     * @param  \Illuminate\Http\Request  $request
+     * @return bool
+     */
+    private function save({? entity.pascal ?} ${? entity.camel ?}, Request $request)
+    {
+        // $isUpdate = ${? entity.camel ?}->exists;
+
+        ${? entity.camel ?}->fill($request->all());
+        $saved = ${? entity.camel ?}->save();
+
+        return $saved;
+    }
+}
