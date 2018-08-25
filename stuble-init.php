@@ -1,5 +1,5 @@
 <?php
 
-$stuble->filter('namespaceToPath', function (string $val) {
+$stuble->filter('nspath', function (string $val) {
     return preg_replace("/^App/", "app", str_replace('\\', '/', $val));
 });

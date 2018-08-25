@@ -1,7 +1,9 @@
-## path: {? controller_namespace.namespaceToPath ?}/{? entity.pascal ?}Controller.php
+===
+path: {? controller_namespace["App\Http\Controllers"].nspath ?}/{? entity.pascal ?}Controller.php
+===
 <?php
 
-namespace {? controller_namespace["App\Http\Controllers"] ?};
+namespace {? controller_namespace ?};
 
 use {? model_namespace["App\Models"] ?}\{? entity.pascal ?};
 use {? request_namespace["App\Http\Requests"] ?}\Store{? entity.pascal ?}Request;

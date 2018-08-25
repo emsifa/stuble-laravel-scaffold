@@ -1,0 +1,5 @@
+===
+[append]
+file = "routes/web.php"
+===
+Route::resource('/{? entity.kebab ?}', '{? entity.pascal ?}Controller');

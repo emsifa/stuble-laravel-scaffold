@@ -1,4 +1,6 @@
-## path: {? resource_namespace["App\Http\Resources"].namespaceToPath ?}/{? entity.pascal ?}Resource.php
+===
+path: {? resource_namespace["App\Http\Resources"].nspath ?}/{? entity.pascal ?}Resource.php
+===
 <?php
 
 namespace {? resource_namespace ?};

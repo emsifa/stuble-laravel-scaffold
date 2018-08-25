@@ -1,4 +1,6 @@
-## path: {? model_namespace["App\Models"].namespaceToPath ?}/{? entity.pascal ?}.php
+===
+path: {? model_namespace["App\Models"].nspath ?}/{? entity.pascal ?}.php
+===
 <?php
 
 namespace {? model_namespace ?};

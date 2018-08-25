@@ -1,4 +1,6 @@
-## path: database/factories/{? entity.pascal ?}Factory.php
+===
+path: database/factories/{? entity.pascal ?}Factory.php
+===
 <?php
 
 use Faker\Generator as Faker;

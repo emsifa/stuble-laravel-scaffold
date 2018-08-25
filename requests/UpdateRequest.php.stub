@@ -1,4 +1,6 @@
-## path: {? request_namespace["App\Http\Requests"].namespaceToPath ?}/Update{? entity.pascal ?}Request.php
+===
+path: {? request_namespace["App\Http\Requests"].nspath ?}/Update{? entity.pascal ?}Request.php
+===
 <?php
 
 namespace {? request_namespace ?};
