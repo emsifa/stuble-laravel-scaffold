@@ -6,7 +6,7 @@ Stubs for generate laravel scaffold using [stuble](https://github.com/emsifa/stu
 ## Installation
 
 ```
-cd $STUBS_PATH
+cd $STUBS_PATH/stubs
 git clone https://github.com/emsifa/stubs-laravel-scaffold laravel-scaffold
 ```
 
@@ -14,6 +14,6 @@ git clone https://github.com/emsifa/stubs-laravel-scaffold laravel-scaffold
 
 ```
 cd path/to/your/laravel-app
-stuble create laravel-scaffold
+stuble make laravel-scaffold
 ```
 
